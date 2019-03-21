@@ -24,7 +24,7 @@ public abstract class ValueChangeEventListener_Instrumentation {
 	  
 	  //call Agent API to name transaction
 	  Transaction txn = NewRelic.getAgent().getTransaction();
-	  txn.setTransactionName(TransactionNamePriority.CUSTOM_HIGH, false, "valuechanged", "ValueChanged");
+	  txn.setTransactionName(TransactionNamePriority.CUSTOM_HIGH, true, "valuechanged", "/ValueChanged");
 	  
 	  Weaver.callOriginal();	
 	  
